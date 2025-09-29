@@ -1,0 +1,4 @@
+{
+    "command": "npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/unified-data-explorer-145037-145047/frontend_nextjs_app"
+}
