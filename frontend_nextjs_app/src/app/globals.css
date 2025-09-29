@@ -1,19 +1,19 @@
-@import "tailwindcss";
-
-/* Ocean Professional Theme Variables */
 :root {
-  --color-primary: #2563EB;
-  --color-secondary: #F59E0B;
-  --color-error: #EF4444;
-  --color-bg: #f9fafb;
-  --color-surface: #ffffff;
-  --color-text: #111827;
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text: #111827;
+  --primary: #2563EB;
+  --secondary: #F59E0B;
+  --error: #EF4444;
 }
 
+* { box-sizing: border-box; }
 html, body {
-  height: 100%;
-  background: var(--color-bg);
-  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 .app-shell {
@@ -23,37 +23,38 @@ html, body {
 }
 
 .sidebar {
-  background: linear-gradient(to bottom, rgb(59 130 246 / 0.1), #f9fafb);
-  border-right: 1px solid rgb(229 231 235);
+  background: var(--surface);
+  border-right: 1px solid #e5e7eb;
+  padding: 16px 12px;
 }
 
-.sidebar .brand {
+.brand {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 20px 16px;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #1f2937;
+  margin-bottom: 12px;
 }
 
 .navlink {
   display: block;
-  padding: 10px 14px;
-  margin: 6px 10px;
+  padding: 10px 12px;
   color: #374151;
-  border-radius: 10px;
-  transition: all .2s ease;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 4px 0;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
 }
-
 .navlink:hover {
-  background: #eef2ff;
+  background: rgba(37, 99, 235, 0.06);
   color: #1e40af;
 }
-
 .navlink.active {
-  background: #dbeafe;
-  color: #1d4ed8;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset;
+  background: rgba(37, 99, 235, 0.12);
+  color: #1e40af;
+  font-weight: 600;
+  transform: translateY(-1px);
 }
 
 .main {
@@ -61,14 +62,11 @@ html, body {
 }
 
 .card {
-  background: var(--color-surface);
-  border: 1px solid rgb(229 231 235);
-  border-radius: 14px;
-  box-shadow:
-    0 1px 2px rgba(0,0,0,0.04),
-    0 8px 24px rgba(2,6,23,0.04);
+  background: var(--surface);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
 .header-gradient {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(17, 24, 39, 0.02));
+  background-image: linear-gradient(120deg, rgba(37, 99, 235, 0.06), rgba(249, 250, 251, 1));
 }
